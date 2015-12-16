@@ -5,6 +5,7 @@ This uses Puppet to automatically install LibreNMS.
 ```
 git clone https://github.com/clay584/LibreNMS_Auto_Install.git
 cd LibreNMS_Auto_Install
+sudo -s
 ./install_librenms.sh
 ```
 
