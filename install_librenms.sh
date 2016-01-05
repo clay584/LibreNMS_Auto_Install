@@ -9,8 +9,13 @@ echo "*** Installing prerequisites for LibreNMS installation script..."
 echo "***"
 sleep 5
 
+# Import Puppetlabs GPG Key
+rpm --import https://yum.puppetlabs.com/RPM-GPG-KEY-puppetlabs
+# Install Puppet Repo
+rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
+yum history sync
 # Install puppet
-yum install puppet git -y
+yum install puppet-agent -y
 # Install puppet mysql module
 puppet module install puppetlabs-mysql
 # Install puppet VCS module
